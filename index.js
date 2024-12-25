@@ -44,7 +44,7 @@ app.post('/shorten', (req, res) => {
   // Store the mapping of short URL to long URL
   urlDatabase[shortUrl] = longUrl;
 
-  return res.render('index', { shortUrl: `http://localhost:${port}/${shortUrl}`, error: null });
+  return res.render('index', { shortUrl: `${shortUrl}`, error: null });
 });
 
 // Endpoint to redirect to the original URL
